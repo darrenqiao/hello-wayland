@@ -2,6 +2,8 @@ CFLAGS ?= -std=c11 -Wall -Wextra -Werror -Wno-unused-parameter -g
 PKG_CONFIG ?= pkg-config
 
 # Host deps
+# sudo apt-get install wayland-protocols
+# sudo apt-get install libwayland-dev
 WAYLAND_FLAGS = $(shell $(PKG_CONFIG) wayland-client --cflags --libs)
 WAYLAND_PROTOCOLS_DIR = $(shell $(PKG_CONFIG) wayland-protocols --variable=pkgdatadir)
 
